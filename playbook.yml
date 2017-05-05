@@ -1,0 +1,7 @@
+---
+- hosts: all
+  vars_files:
+    - vars/load.yml
+  roles:
+    - common
+    - environment
