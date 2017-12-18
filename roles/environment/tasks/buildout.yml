@@ -52,7 +52,7 @@
     become_user: "{{ user_name }}"
 
   - name: Run bootstrap
-    shell: python bootstrap.py
+    shell: python bootstrap.py --setuptools-version 38.2.4 --buildout-version 2.10.0
       chdir=/home/{{ user_name }}/{{buildout_path}}
     when: buildout_exists.rc != 0
     tags:
